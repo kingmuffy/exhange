@@ -34,7 +34,7 @@ const RegisterScreen = () => {
         const res = await register({ name, email, password }).unwrap()
         dispatch(setCredentials({ ...res }))
         // Replace 'redirect' with the appropriate value or remove the navigate() call if not needed
-        navigate('/') // Replace '/' with the appropriate route if needed
+        navigate('/profile') // Replace '/' with the appropriate route if needed
       } catch (err) {
         toast.error(err?.data?.message || err.error)
       }
